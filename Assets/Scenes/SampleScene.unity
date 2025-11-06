@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: bd34aacc61625884f8e3fe551d10351e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   G: 6.67408e-11
-  gravityScale: 0.5
+  gravityScale: 1
   minDistance: 0.5
 --- !u!4 &256294333
 Transform:
@@ -486,6 +486,10 @@ PrefabInstance:
     - target: {fileID: 4113667925760248668, guid: 6ae9164f05918014aac944ee191a7dfc, type: 3}
       propertyPath: m_Name
       value: CelestialBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113667925760248670, guid: 6ae9164f05918014aac944ee191a7dfc, type: 3}
+      propertyPath: m_Constraints
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4113667925760248671, guid: 6ae9164f05918014aac944ee191a7dfc, type: 3}
       propertyPath: mass
