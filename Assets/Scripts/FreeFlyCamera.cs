@@ -4,6 +4,8 @@ public class FreeFlyCamera : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float lookSpeed = 2f;
+    public SimulationManager simManager;
+    
     private bool isFlying = false;
 
     void Start()
@@ -16,6 +18,9 @@ public class FreeFlyCamera : MonoBehaviour
 
     void Update()
     {
+        if (simManager == null || !simManager.simulationRunning)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isFlying = !isFlying;
