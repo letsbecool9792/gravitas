@@ -1,4 +1,4 @@
-# Gravitas
+#Gravitas
 
 This project simulates a simplified 3D **gravitational system** where celestial bodies attract each other using **Newton’s Law of Universal Gravitation**.  
 Bodies can be manually spawned with custom properties through a **UI system**, and the simulation can be started or paused using buttons.
