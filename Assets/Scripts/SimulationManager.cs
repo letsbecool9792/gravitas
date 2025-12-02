@@ -5,10 +5,16 @@ using System.Collections.Generic;
 
 public class SimulationManager : MonoBehaviour
 {
+    public GameObject panelIntro;
     public GameObject panelMainMenu;
     public GameObject panelSpawnModal;
     public GameObject bodyPrefab;
     public Transform bodiesParent;
+
+    public GameObject introStartButton;
+    public GameObject introInformationButton;
+    public GameObject informationText;
+    public GameObject informationBackButton;
 
     public TMP_InputField massField;
     public TMP_InputField radiusField;
@@ -31,10 +37,18 @@ public class SimulationManager : MonoBehaviour
 
     void Start()
     {
-        panelMainMenu.SetActive(true);
+        // Show intro panel first
+        panelIntro.SetActive(true);
+        panelMainMenu.SetActive(false);
         panelSpawnModal.SetActive(false);
         
-        // Initially show menu buttons, hide sim controls
+        // Intro panel: show buttons, hide info text
+        introStartButton.SetActive(true);
+        introInformationButton.SetActive(true);
+        informationText.SetActive(false);
+        informationBackButton.SetActive(false);
+        
+        // Initially hide sim controls
         buttonStart.SetActive(true);
         buttonSpawn.SetActive(true);
         buttonPause.SetActive(false);
@@ -44,6 +58,28 @@ public class SimulationManager : MonoBehaviour
         buttonSpeed2x.SetActive(false);
         
         Time.timeScale = 0f; 
+    }
+
+    public void OnIntroStartClicked()
+    {
+        panelIntro.SetActive(false);
+        panelMainMenu.SetActive(true);
+    }
+
+    public void OnInformationButtonClicked()
+    {
+        introStartButton.SetActive(false);
+        introInformationButton.SetActive(false);
+        informationText.SetActive(true);
+        informationBackButton.SetActive(true);
+    }
+
+    public void OnInformationBackClicked()
+    {
+        introStartButton.SetActive(true);
+        introInformationButton.SetActive(true);
+        informationText.SetActive(false);
+        informationBackButton.SetActive(false);
     }
 
     public void OnSpawnButtonClicked()
