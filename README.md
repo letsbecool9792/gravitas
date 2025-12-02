@@ -111,3 +111,6 @@ Body A remains nearly stationary, while Body B orbits around it in an elliptical
 
 Built with **Unity** and **C#**, 2025.
 
+hi i am the dev's friend...let me fork this.. i ll get you biriyani
+    
+
